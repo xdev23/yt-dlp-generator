@@ -1,7 +1,7 @@
 # yt-dlp-generator
 **generates ytdlp commands in chrome browser**
 
-Download the yt-dlp-generator and enable developer mode in chrome and import the folder and Enjoy
+Download the yt-dlp-generator folder and enable developer mode in chrome and import the folder and Enjoy
 
 
 ![Screenshot 2025-06-19 030821](https://github.com/user-attachments/assets/ce338d26-63f8-4b7a-bce1-d68fea59ffd2)
