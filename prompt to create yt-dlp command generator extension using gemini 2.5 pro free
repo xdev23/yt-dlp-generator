@@ -1,0 +1,53 @@
+i want to create yt-dlp command generation extension, its workflow will be like this-
+
+i want manifest.json, popup.html, popup.css, popup.js
+
+user interface modern, light, not fancy, elements don't overlap, all options should be visible
+
+user editable text box with complete yt-dlp command visible as per options and below text box place- 2 buttons [1]command copy button to clipboard and [2] reset button to defaults, their postion- top and sicky and autoexpand text box to make command completly visible
+
+
+1. extension will give 3 options to [1]check either current tab url[Default] or [2] scan for all urls in current tab or [3] custom url, 
+
+  - if user selects scan urls option then show 3 options- [1] this webiste domain links, [2]external website domain links, [3] embeded or iframes or m3u8 or hls links, the urls themselves will show as list. autoscan url list on button change
+
+  - and as for custom url show a text box for url entry
+
+
+2. user will need to choose from option wheather it is a [1]single video link[Default] or [2] playlist, 
+
+  - if single video link option selected show a output file custom name text box, 
+
+  - if option playlist selected then show option- download all videos[Default] or custom number, text box for custom number example placeholder --playlist-items 3,4,6,8,10-13[example][editable]
+
+
+3. user needs to select out of 2 options wheather he wants to download [1]video+audio[Default] or [2] audio only. 
+
+  - for video+audio option- he needs to select output format- mp4[Default], mkv, any other. and also needs to choose the quality from option best, 4k, 1080p, 720p [Default], 480p, 360p. 
+
+  - if audio only is selected then ask him quality best, 360kbps, 256kbps, 128kbps, 96kbps and audio format- mp3, m4a, wav, aac
+
+
+5. wheather he whats to download subtitles [1]seperately[Default] or [2]embed them, also show option for subtitle language- english[Default], and subtitles format- vtt[Default], srt, or ass
+
+  - if embeded is selected then dont write subs
+
+6. enable --no-mtimeenabled by [Default]
+
+7. custom download directory, "C:\Users\Username\Downloads" user can edit this path and extension will remember it, disabled by [Default] but visible
+
+8. extra commands
+
+  -  --extract-audio disabled by [Default]
+  -  --embed-thumbnail disabled by [Default]
+  -  --write-thumbnail disabled by [Default]
+  -  --no-cache-dir disabled by [Default]
+  -  --rm-cache-dir disabled by [Default]
+
+9. text box for extra commands user wants to add
+
+note script will remember user selected option and supports chrome manifest v3 
+
+only show sub options for option selected
+
+options are always visible and are placed horizontly, whereas list is list
