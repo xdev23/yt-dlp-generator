@@ -1,0 +1,161 @@
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --border-color: #dee2e6;
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --light-gray: #e9ecef;
+    --container-width: 500px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    width: var(--container-width);
+}
+
+.container {
+    padding: 10px;
+}
+
+#commandHeader {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 10;
+}
+
+#commandOutput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    resize: vertical;
+    background-color: var(--light-gray);
+    min-height: 100px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+button {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#copyButton {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+#copyButton:hover {
+    background-color: var(--primary-hover);
+}
+
+#resetButton {
+    background-color: #6c757d;
+    color: white;
+    border-color: #6c757d;
+}
+
+#resetButton:hover {
+    background-color: #5a6268;
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: 600;
+    padding: 0 5px;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.option-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sub-options {
+    margin-top: 10px;
+    padding-left: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+#playlistItems, #downloadPath {
+    flex-grow: 1;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.url-list {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 10px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.url-list p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.url-list label {
+    display: block;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    word-break: break-all;
+}
+
+.url-list label:hover {
+    background-color: var(--light-gray);
+}

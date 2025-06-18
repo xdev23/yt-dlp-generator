@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT-DLP Command Generator</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+    <header id="commandHeader">
+        <textarea id="commandOutput" readonly rows="2" placeholder="Your generated yt-dlp command will appear here..."></textarea>
+        <div class="button-group">
+            <button id="copyButton">Copy Command</button>
+            <button id="resetButton">Reset to Defaults</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- URL Source -->
+        <fieldset>
+            <legend>1. URL Source</legend>
+            <div class="option-group">
+                <label><input type="radio" name="urlSource" value="current" checked> Current Tab</label>
+                <label><input type="radio" name="urlSource" value="scan"> Scan Tab</label>
+                <label><input type="radio" name="urlSource" value="custom"> Custom URL</label>
+            </div>
+            <!-- Sub-options for Scan -->
+            <div id="scanOptions" class="sub-options hidden">
+                <div class="option-group">
+                    <label><input type="radio" name="scanType" value="internal" checked> This Domain</label>
+                    <label><input type="radio" name="scanType" value="external"> External</label>
+                    <label><input type="radio" name="scanType" value="embed"> Embeds/Streams</label>
+                </div>
+                <div id="scannedUrlsContainer" class="url-list">
+                    <p>Select 'Scan Tab' to begin.</p>
+                </div>
+            </div>
+            <!-- Sub-options for Custom -->
+            <div id="customUrlOptions" class="sub-options hidden">
+                <input type="text" id="customUrl" placeholder="Enter URL here">
+            </div>
+        </fieldset>
+
+        <!-- Link Type -->
+        <fieldset>
+            <legend>2. Link Type</legend>
+            <div class="option-group">
+                <label><input type="radio" name="linkType" value="single" checked> Single Video</label>
+                <label><input type="radio" name="linkType" value="playlist"> Playlist</label>
+            </div>
+            <!-- Sub-options for Single Video -->
+            <div id="singleVideoOptions" class="sub-options">
+                <input type="text" id="outputFileName" placeholder="Custom filename (optional)">
+            </div>
+            <!-- Sub-options for Playlist -->
+            <div id="playlistOptions" class="sub-options hidden">
+                <label><input type="radio" name="playlistRange" value="all" checked> Download All</label>
+                <label><input type="radio" name="playlistRange" value="custom"> Custom Range</label>
+                <input type="text" id="playlistItems" class="hidden" placeholder="e.g., 3,4,6,8,10-13">
+            </div>
+        </fieldset>
+
+        <!-- Download Type -->
+        <fieldset>
+            <legend>3. Download Type</legend>
+            <div class="option-group">
+                <label><input type="radio" name="downloadType" value="video" checked> Video + Audio</label>
+                <label><input type="radio" name="downloadType" value="audio"> Audio Only</label>
+            </div>
+            <!-- Sub-options for Video -->
+            <div id="videoOptions" class="sub-options">
+                <select id="videoFormat">
+                    <option value="mp4">mp4</option>
+                    <option value="mkv">mkv</option>
+                    <option value="any">any</option>
+                </select>
+                <select id="videoQuality">
+                    <option value="best">Best</option>
+                    <option value="4k">4K (2160p)</option>
+                    <option value="1080p">1080p</option>
+                    <option value="720p" selected>720p</option>
+                    <option value="480p">480p</option>
+                    <option value="360p">360p</option>
+                </select>
+            </div>
+            <!-- Sub-options for Audio -->
+            <div id="audioOptions" class="sub-options hidden">
+                <select id="audioFormat">
+                    <option value="mp3">mp3</option>
+                    <option value="m4a">m4a</option>
+                    <option value="wav">wav</option>
+                    <option value="aac">aac</option>
+                </select>
+                <select id="audioQuality">
+                    <option value="best">Best (0)</option>
+                    <option value="320k">320 kbps (1)</option>
+                    <option value="256k">256 kbps (3)</option>
+                    <option value="128k" selected>128 kbps (5)</option>
+                    <option value="96k">96 kbps (7)</option>
+                </select>
+            </div>
+        </fieldset>
+        
+        <!-- Subtitles -->
+        <fieldset>
+            <legend>4. Subtitles</legend>
+            <label><input type="checkbox" id="enableSubtitles"> Download Subtitles</label>
+            <div id="subtitleOptions" class="sub-options hidden">
+                <div class="option-group">
+                    <label><input type="radio" name="subType" value="separate" checked> Separate File</label>
+                    <label><input type="radio" name="subType" value="embed"> Embed</label>
+                </div>
+                 <input type="text" id="subtitleLang" value="en">
+                <select id="subtitleFormat">
+                    <option value="vtt">vtt</option>
+                    <option value="srt">srt</option>
+                    <option value="ass">ass</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <!-- Other Options -->
+        <fieldset>
+            <legend>5. Other Options</legend>
+             <div class="checkbox-grid">
+                <label><input type="checkbox" id="noMtime" checked> --no-mtime</label>
+                <label><input type="checkbox" id="embedThumbnail"> --embed-thumbnail</label>
+                <label><input type="checkbox" id="writeThumbnail"> --write-thumbnail</label>
+                <label><input type="checkbox" id="noCacheDir"> --no-cache-dir</label>
+                <label><input type="checkbox" id="rmCacheDir"> --rm-cache-dir</label>
+            </div>
+        </fieldset>
+        
+        <!-- Download Path -->
+        <fieldset>
+            <legend>6. Custom Download Path</legend>
+            <label><input type="checkbox" id="enableDownloadPath"> Enable Custom Path</label>
+            <div id="downloadPathOptions" class="sub-options hidden">
+                <input type="text" id="downloadPath" placeholder="e.g., C:\Users\YourUser\Videos">
+            </div>
+        </fieldset>
+
+        <!-- Extra Commands -->
+        <fieldset>
+            <legend>7. Extra Commands</legend>
+            <textarea id="extraCommands" rows="2" placeholder="Add any other flags here, e.g., --cookies-from-browser firefox"></textarea>
+        </fieldset>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
