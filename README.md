@@ -4,9 +4,9 @@
 Download the yt-dlp-generator folder and enable developer mode in chrome and import the folder and Enjoy
 
 ***
-you can create your own extension with gemini 2.5 pro i have given my prompt in file [gemini 2.5 pro yt-dlp prompt](https://github.com/xdev23/yt-dlp-generator/blob/main/gemini%202.5%20pro%20yt-dlp%20prompt)  paste the prompt in gemini 2.5 pro in https://aistudio.google.com then you will have a extension like mine
+you can create your own yt-dlp chrome extension with **AI gemini 2.5 pro** i have given my prompt in file [**gemini 2.5 pro yt-dlp prompt**](https://github.com/xdev23/yt-dlp-generator/blob/main/gemini%202.5%20pro%20yt-dlp%20prompt)  paste the prompt in gemini 2.5 pro in https://aistudio.google.com then you will have a extension like mine
 
-pls check the prompt- i am not responsible for any issue
+**pls check the prompt- i am not responsible for any issue**
 
 ***
 
