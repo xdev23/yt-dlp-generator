@@ -20,7 +20,7 @@ my extension doesnt detect m3u8 or hls streams bcoz i dont know how to code, thi
 
 🔥 Key Features of the yt-dlp Command Generator Extension
 
-🎯  Choose from **current tab URL**, **scan all URLs on page**, or **enter a custom URL**.
+🎯  Choose from **current tab URL**, **scan all URLs on page**, or **enter a custom URL**. It even **extracts URL from right click disabled websites.**
 
 🎬 Supports **single videos** or **playlists** with **custom video selection**.
 
