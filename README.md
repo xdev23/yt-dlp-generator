@@ -12,9 +12,9 @@ you can create your own yt-dlp chrome extension with **AI gemini 2.5 pro** i hav
 
 ***
 
-i didnt want to download 3rd party gui apps bcoz they consume RAM, behind the scene using yt-dlp so i just created chrome extension then works the same way,now i just have to copy then command and paste.
+i didnt want to download 3rd party gui apps bcoz they consume RAM, behind the scene using yt-dlp so i just created chrome extension that works the same way as those gui apps, Now the only thing I need to do is copy the command and paste it in terminal so yt-dlp can download, **if you have knowledge you setup a python listening server and extension will send the command automatically after that, this way it will work like a download manager.**
 
-my extension doesnt detect m3u8 or hls streams bcoz i dont know how to code, this script is good for youtube and embeded urls thats it, but i think if m3u8 detecter extensions integrate yt-dlp that would replace downloader managers like idm or video download helper, these extensions do same thing but with less 2-3 mouse clicks.
+my extension doesnt detect m3u8 or hls streams bcoz i dont know how to code, this script is good for youtube and embeded urls thats it, but i think if m3u8 detecter extensions like [fetchV](https://chromewebstore.google.com/detail/fetchv-video-downloader-f/nfmmmhanepmpifddlkkmihkalkoekpfd) integrate yt-dlp command extension that can replace video downloader managers like idm or video download helper, these download manager extensions do same thing but with less 2-3 mouse clicks.
 
 video link- removed
 
