@@ -16,7 +16,35 @@ i didnt want to download 3rd party gui apps bcoz they consume RAM, behind the sc
 
 my extension doesnt detect m3u8 or hls streams bcoz i dont know how to code, this script is good for youtube and embeded urls thats it, but i think if m3u8 detecter extensions like [fetchV](https://chromewebstore.google.com/detail/fetchv-video-downloader-f/nfmmmhanepmpifddlkkmihkalkoekpfd) integrate yt-dlp command extension that can replace video downloader managers like idm or video download helper, these download manager extensions do same thing but with less 2-3 mouse clicks.
 
-video link- removed
+***
+
+🔥 Key Features of the yt-dlp Command Generator Extension
+
+🎯  Choose from **current tab URL**, **scan all URLs on page**, or **enter a custom URL**.
+
+🎬 Supports **single videos** or **playlists** with **custom video selection**.
+
+📥 Choose between **video+audio** or **audio-only** downloads with **customizable formats and quality**.
+
+📝 Download **subtitles** **separately** or **embed them**; choose **language** and **format**.
+
+🧠 **Live Command Preview**, Instantly see the full yt-dlp command as you select options.
+
+📋 **Copy** the generated command **to clipboard** with a single click.
+
+🔄 Instantly **revert all settings** to default values.
+
+💾 Set your **custom file names** and **download directory** (remembered between sessions).
+
+🔧 Toggle **extra options** like **--extract-audio**, **--embed-thumbnail**, and more.
+
+✍️ **Extra Command Box**- Add any **custom yt-dlp arguments** manually.
+
+🖼️ Lightweight, **easy-to-use interface** with all options visible and organized.
+
+🔒 Chrome **Manifest V3** Compatible
+
+***
 
 ![Screenshot 2025-06-19 030821](https://github.com/user-attachments/assets/ce338d26-63f8-4b7a-bce1-d68fea59ffd2)
 
